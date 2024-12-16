@@ -6,7 +6,7 @@ export const consoleAllowList: (list: string[]) => void = (list: string[]): void
     allowList = list;
 };
 
-export const lambdaConsole: (command: string) => Promise<void> = async (command: string): Promise<void> => {
+export const serverlessConsole: (command: string) => Promise<void> = async (command: string): Promise<void> => {
     if (allowList.length > 0 && !allowList.includes(command)) {
         console.error('Command not allowed.');
         console.error('Allowed commands are:');

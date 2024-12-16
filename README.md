@@ -15,9 +15,9 @@ Initiate the handler
 ```
 // src/console.ts
 
-import { lambdaConsole } from 'serverless-console';
+import { serverlessConsole } from 'serverless-console';
 
-export const handler: (command: string) => Promise<void> = lambdaConsole;
+export const handler: (command: string) => Promise<void> = serverlessConsole;
 ```
 
 Optionally define a set of commands that are allowed
@@ -25,11 +25,11 @@ Optionally define a set of commands that are allowed
 ```
 // src/console.ts
 
-import { consoleAllowList, lambdaConsole } from 'serverless-console';
+import { consoleAllowList, serverlessConsole } from 'serverless-console';
 
 consoleAllowList(['console.log("This command is allowed.")', 'yarn --version']);
 
-export const handler: (command: string) => Promise<void> = lambdaConsole;
+export const handler: (command: string) => Promise<void> = serverlessConsole;
 ```
 
 ### Serverless example

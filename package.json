@@ -1,0 +1,14 @@
+{
+  "name": "serverless-console",
+  "version": "1.0.2",
+  "description": "simple console handler to run CLI commands on lambda apps",
+  "main": "index.js",
+  "author": "Jonathan Franzén",
+  "license": "MIT",
+  "dependencies": {
+    "node": "^23.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
+}

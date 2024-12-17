@@ -32,7 +32,7 @@ consoleAllowList(['console.log("This command is allowed.")', 'yarn --version']);
 export const handler: (command: string) => Promise<void> = serverlessConsole;
 ```
 
-### Serverless example
+### Serverless example with CRON
 
 ```
 // serverless.yml
@@ -59,4 +59,4 @@ functions:
           rate: rate(1 minute)
           input: 'yarn --version'
 ```
-
+Invoke with `yarn serverless invoke --function console --data "yarn --version"`

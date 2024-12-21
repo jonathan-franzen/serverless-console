@@ -49,7 +49,7 @@ provider:
   region: us-east-1
   stage: ${opt:stage, 'staging'}
   timeout: 20
- 
+
 functions:
   console:
     handler: src/console.handler
@@ -59,4 +59,5 @@ functions:
           rate: rate(1 minute)
           input: 'yarn --version'
 ```
+
 Invoke with `yarn serverless invoke --function console --data "yarn --version"`
